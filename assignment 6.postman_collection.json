@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "fbd29175-8b3a-41e3-b58f-6cfd4d05dc50",
+		"name": "assignment 6",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26661397"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"karem\",\r\n    \"email\":\"karem@gmail.com\",\r\n    \"password\":\"12385\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"ahmed@gmail.com\",\r\n    \"password\":\"12385\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/signIn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"layla6@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/user/?_id=658134b91ba6bb37b6f3917c&loggedInId=658134b91ba6bb37b6f3917c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "_id",
+									"value": "658134b91ba6bb37b6f3917c"
+								},
+								{
+									"key": "loggedInId",
+									"value": "658134b91ba6bb37b6f3917c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/user/?loggedInId=65817c05af9b3ebda092f515",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								""
+							],
+							"query": [
+								{
+									"key": "loggedInId",
+									"value": "65817c05af9b3ebda092f515"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getuserdata",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/user/658134b91ba6bb37b6f3917c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"user",
+								"658134b91ba6bb37b6f3917c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "sendmessage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"happy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/message/65813336ed16cf43945538bb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"message",
+								"65813336ed16cf43945538bb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/message/?loggedinUserid=65813336ed16cf43945538bb&messageId=6581b0c5b5ea979364c53993",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"message",
+								""
+							],
+							"query": [
+								{
+									"key": "loggedinUserid",
+									"value": "65813336ed16cf43945538bb"
+								},
+								{
+									"key": "messageId",
+									"value": "6581b0c5b5ea979364c53993"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/message/?loggedinUserid=65813336ed16cf43945538bb&messageId=6581b3ba4fd285c45db0b593",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"message",
+								""
+							],
+							"query": [
+								{
+									"key": "loggedinUserid",
+									"value": "65813336ed16cf43945538bb"
+								},
+								{
+									"key": "messageId",
+									"value": "6581b3ba4fd285c45db0b593"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/message/?loggedinUserid=65813336ed16cf43945538bb&isViewed=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"message",
+								""
+							],
+							"query": [
+								{
+									"key": "loggedinUserid",
+									"value": "65813336ed16cf43945538bb"
+								},
+								{
+									"key": "isViewed",
+									"value": "false"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
